@@ -1,0 +1,213 @@
+@font-face {
+  src: url('fonts/NewParisEcalKingSize-Regular.otf');
+  font-family: 'Paris';
+}
+
+@font-face {
+  src: url('fonts/SuisseEcalIntl-Light.otf');
+  font-family: 'Suisse';
+  font-style: normal;
+}
+
+@keyframes instruction {
+  0% {
+    top: 48vh;
+  }
+
+  50% {
+    top: 46vh;
+  }
+
+  100% {
+    top: 48vh;
+  }
+}
+
+@keyframes instruction2 {
+  0% {
+    top: 46vh;
+  }
+
+  50% {
+    top: 48vh;
+  }
+
+  100% {
+    top: 46vh;
+  }
+}
+
+html,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  /* background-color: black; */
+  overflow-wrap: break-word;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  --right-bg-color: rgba(0, 0, 0, 0);
+  --left-bg-color: rgba(0, 0, 0, 0);
+  --right-color: black;
+  --left-color: white;
+  --width: 45vw;
+  --height: 50vh;
+  --transform-origin: 110% 0%;
+
+}
+
+section {
+  z-index: 100;
+  perspective: 300em;
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 35%;
+  line-height: 20vh;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+
+section div {
+  /* border: 2px solid red; */
+  transition: transform 0.5s;
+
+}
+
+#face1 {
+  position: absolute;
+  background-color: var(--right-bg-color);
+  color: var(--right-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+
+}
+
+#face2 {
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: var(--left-bg-color);
+  color: var(--left-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face3 {
+  position: absolute;
+  background-color: var(--right-bg-color);
+  color: var(--right-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face4 {
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: var(--left-bg-color);
+  color: var(--left-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face5 {
+  position: absolute;
+  background-color: var(--right-bg-color);
+  color: var(--right-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face6 {
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: var(--left-bg-color);
+  color: var(--left-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face7 {
+  position: absolute;
+  background-color: var(--right-bg-color);
+  color: var(--right-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+#face8 {
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: var(--left-bg-color);
+  color: var(--left-color);
+  width: var(--width);
+  height: var(--height);
+  transform-origin: var(--transform-origin);
+}
+
+span {
+  display: block;
+  font-family: 'Suisse';
+  text-align: right;
+  /* font-size: 100px; */
+  font-size: 7vw;
+}
+
+#reverse {
+  display: block;
+  font-family: 'Paris';
+  transform: scale(-1, 1);
+  text-align: left;
+  /* font-size: 120px; */
+  font-size: 8.4vw;
+}
+
+#fond-noir {
+  z-index: 0;
+  background-color: black;
+  display: block;
+  position: absolute;
+  width: 49.55vw;
+  height: 100vh;
+}
+
+#instruction {
+  display: block;
+  position: absolute;
+  color: white;
+  font-family: 'Suisse';
+  width: 50%;
+  /* top: 40vh; */
+  text-align: center;
+  /* font-size: 100px; */
+  font-size: 2vw;
+  animation-duration: 1s;
+  animation-name: instruction;
+  animation-iteration-count: infinite;
+
+}
+
+#instruction2 {
+  display: block;
+  position: absolute;
+  color: black;
+  font-family: 'Paris';
+  width: 50%;
+  left: 50vw;
+  /* top: 40vh; */
+  text-align: center;
+  /* font-size: 100px; */
+  font-size: 2.4vw;
+  animation-duration: 1s;
+  animation-name: instruction2;
+  animation-iteration-count: infinite;
+
+}
